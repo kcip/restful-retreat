@@ -1,0 +1,17 @@
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-width: 100vw;
+  min-height: 60vh;
+  grid-gap: 10px;
+
+  padding: 0 50px;
+
+  h2 {
+    grid-row: 1;
+    grid-column: 1 /-1;
+    justify-self: center;
+    align-self: center;
+  }
+}

@@ -1,0 +1,23 @@
+.header {
+  width: 100vw;
+  height: 50px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+   &__left {
+    padding-left: 50px;
+   }
+   &__center {
+     flex: 1;
+     width: 40vw;
+     display: flex;
+     justify-content: center;
+
+   }
+   &__right {
+     padding-right: 50px;
+   }
+
+}
