@@ -1,10 +1,11 @@
 .header {
   width: 100vw;
   height: 50px;
-  background: white;
+  background: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #fff;
 
    &__left {
     padding-left: 50px;
@@ -19,5 +20,13 @@
    &__right {
      padding-right: 50px;
    }
+}
 
+
+//sticky header styles
+.sticky {
+  background: blue;
+  position: sticky;
+  left: 0;
+  top: 0;
 }

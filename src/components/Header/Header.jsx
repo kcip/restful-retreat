@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './header.scss'
-function Header() {
+const Header = () => {
+
+  const [isSticky, setSticky] = useState(false);
+  const ref = useRef(null);
+
+  const handleScroll = () => {
+    if (ref.current) {
+      setSticky(ref.current.getBoundingClientRect().top <= 50)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll);
+    };
+  }, []);
   return (
-    <header className="header">
+    <header className={`header ${isSticky ? 'sticky' : ''}`} ref={ref}>
       <div className="header__left">
         a logo goes here
       </div>
